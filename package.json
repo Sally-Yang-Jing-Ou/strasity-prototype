@@ -49,7 +49,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8"
   },
-  "homepage": "http://demos.creative-tim.com/material-dashboard/examples/dashboard.html?_ga=2.143239282.69692347.1519629130-329288944.1519374311",
+  "homepage": "http://demos.creative-tim.com/material-dashboard/examples/index.html?_ga=2.143239282.69692347.1519629130-329288944.1519374311",
   "dependencies": {
     "gulp-cli": "^2.3.0"
   }

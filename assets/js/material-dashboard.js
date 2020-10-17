@@ -373,7 +373,7 @@ md = {
       var dataWebsiteViewsChart = {
         labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
         series: [
-          [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
+          [10, 20, 15, 25, 10, 11, 5, 9, 22, 4, 13, 22]
 
         ]
       };
@@ -382,7 +382,7 @@ md = {
           showGrid: false
         },
         low: 0,
-        high: 1000,
+        high: 50,
         chartPadding: {
           top: 0,
           right: 5,
@@ -404,6 +404,29 @@ md = {
 
       //start animation for the Emails Subscription Chart
       md.startAnimationForBarChart(websiteViewsChart);
+    
+
+
+       var barChartGender = new Chartist.Bar('#barChartGender', {
+        labels: ['Female', 'Visible Minority'],
+        series: [
+            [33, 40, ],
+            [28.5, 24.6, ]
+        ]}, {
+     axisX: {
+          showGrid: false
+        },
+        low: 0,
+        high: 50,
+        chartPadding: {
+          top: 0,
+          right: 5,
+          bottom: 0,
+          left: 0
+        }
+      });
+    md.startAnimationForBarChart(barChartGender);
+
     }
   },
 
