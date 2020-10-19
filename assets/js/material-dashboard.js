@@ -309,7 +309,7 @@ md = {
 
   initDashboardPageCharts: function() {
 
-    if ($('#dailySalesChart').length != 0 || $('#completedTasksChart').length != 0 || $('#websiteViewsChart').length != 0) {
+    if ($('#dailySalesChart').length != 0 || $('#completedTasksChart').length != 0 || $('#websiteViewsChart').length != 0 || $('#barChartGender').length != 0) {
       /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
       dataDailySalesChart = {
@@ -426,6 +426,22 @@ md = {
         }
       });
     md.startAnimationForBarChart(barChartGender);
+
+
+    var datapie = {
+        series: [62.6, 31.9, 5]
+    };
+
+    var sumpie = function(a, b) { return a + b };
+
+    var piechart = new Chartist.Pie('.ct-chart', datapie, {
+      labelInterpolationFnc: function(value) {
+        return Math.round(value / datapie.series.reduce(sumpie) * 100) + '%';
+      }
+    });
+
+    md.startAnimationForBarChart(piechart);
+
 
     }
   },
